@@ -13,10 +13,10 @@ spring:
           predicates:
             - Path=/divyansh/**
 
-        - id: STUDENT1-API-DEMO
-          uri: http://localhost:2012
+        - id: library-mvc-project
+          uri: http://localhost:2010
           predicates:
-            - Path=/student/**
+            - Path=/library/**
 
 eureka:
   client:
