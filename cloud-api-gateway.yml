@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: cloud-api-gateway
+
+  config:
+    import: "optional:configserver:"
+
+  cloud:
+    gateway:
+      routes:
+        - id: USER-API-URL
+          uri: http://localhost:2015
+          predicates:
+            - Path=/user/**
+
+        - id: STUDENT1-API-DEMO
+          uri: http://localhost:2012
+          predicates:
+            - Path=/student/**
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+server:
+  port: 9090
