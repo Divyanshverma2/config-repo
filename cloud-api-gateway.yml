@@ -11,7 +11,7 @@ spring:
         - id: user-client
           uri: http://localhost:2011
           predicates:
-            - Path=/user/**
+            - Path=/divyansh/**
 
         - id: STUDENT1-API-DEMO
           uri: http://localhost:2012
