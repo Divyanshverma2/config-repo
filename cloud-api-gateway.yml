@@ -8,8 +8,8 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: USER-API-URL
-          uri: http://localhost:2015
+        - id: user-client
+          uri: http://localhost:2011
           predicates:
             - Path=/user/**
 
